@@ -99,7 +99,7 @@ body {
 
 .hero__wrapper {
   padding: 100px;
-  background-image: url("../assets/images/hero_background.jpg");
+  background-image: url("../assets/images/hero-background.jpg");
   background-size: cover;
   border-radius: 40px;
 }
@@ -198,4 +198,40 @@ body {
 
 .slider__pagination-bullet.active {
   background-color: var(--border-dark);
+}
+
+.about {
+  margin-bottom: 100px;
+}
+
+.about__title {
+  margin-bottom: 40px;
+}
+
+.about__title .accent {
+  color: var(--text-accent);
+}
+
+.about__images-container {
+  display: flex;
+  gap: 40px;
+}
+
+.about__images-column {
+  display: flex;
+  width: calc((100% - 40px) / 2);
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about__image {
+  height: 590px;
+  border-radius: 20px;
+  object-fit: none;
+  object-position: center;
+}
+
+.about__images-column:nth-child(1) .about__image:nth-child(2),
+.about__images-column:nth-child(2) .about__image:nth-child(1) {
+  height: 430px;
 }
