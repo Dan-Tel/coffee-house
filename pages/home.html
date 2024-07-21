@@ -15,12 +15,14 @@
   <header class="header">
     <div class="header__container container">
       <img class="header__logo" width="100px" height="60px" alt="Coffee House" src="../assets/icons/header_logo.svg">
+
       <ul class="header__nav">
         <li class="nav-item fs-link-btn">Favorite coffee</li>
         <li class="nav-item fs-link-btn">About</li>
         <li class="nav-item fs-link-btn">Mobile app</li>
         <li class="nav-item fs-link-btn">Contact us</li>
       </ul>
+
       <div class="header__menu-btn fs-link-btn">
         Menu
         <img src="../assets/icons/menu_cup_icon.svg" alt="Cup">
@@ -35,13 +37,61 @@
           <h1 class="hero__title fs-heading-1">
             <span class="accent">Enjoy</span> premium coffee at our charming cafe
           </h1>
+
           <p class="hero__text fs-medium">
             With its inviting atmosphere and delicious coffee options, the Coffee
             House Resource is a popular destination for coffee lovers and those
             seeking a warm and inviting space to enjoy their favorite beverage.
           </p>
+
           <button class="hero__menu-btn fs-link-btn">Menu</button>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slider">
+    <div class="slider__container container">
+      <h2 class="slider__title fs-heading-2">
+        Choose your <span class="accent">favorite</span> coffee
+      </h2>
+
+      <div class="slider__wrapper">
+        <button class="slider__left-btn">
+          <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="#665f55" />
+            <path d="M36.5 30H24M24 30L30 24M24 30L30 36" stroke="#403f3d" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+
+        <div class="slider__row">
+          <div class="slide">
+            <img class="slide__img" alt="S’mores Frappuccino" src="../assets/images/coffee_slide_1.png">
+            <div class="slide__text">
+              <h3 class="slide__title fs-heading-3">S’mores Frappuccino</h3>
+              <p class="slide__desc fs-medium">
+                This new drink takes an espresso and mixes it with brown
+                sugar and cinnamon before being topped with oat milk.
+              </p>
+              <h3 class="slide__price fs-heading-3">$5.50</h3>
+            </div>
+          </div>
+        </div>
+
+        <button class="slider__right-btn">
+          <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="#665f55" />
+            <path d="M24 30H36.5M36.5 30L30.5 24M36.5 30L30.5 36" stroke="#403f3d" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+
+        <ul class="slider__pagination">
+          <li class="slider__pagination-bullet active"></li>
+          <li class="slider__pagination-bullet"></li>
+          <li class="slider__pagination-bullet"></li>
+        </ul>
       </div>
     </div>
   </section>

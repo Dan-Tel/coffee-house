@@ -6,6 +6,9 @@
   --text-dark: #403f3d;
   --text-light: #e1d4c9;
   --text-accent: #b0907a;
+
+  --border-light: #c1b6ad;
+  --border-dark: #665f55;
 }
 
 * {
@@ -27,7 +30,20 @@ body {
   font-weight: 600;
 }
 
-.fs-heading-1 .accent {
+.fs-heading-2 {
+  font-size: 60px;
+  line-height: 125%;
+  font-weight: 600;
+}
+
+.fs-heading-3 {
+  font-size: 24px;
+  line-height: 125%;
+  font-weight: 600;
+}
+
+.fs-heading-1 .accent,
+.fs-heading-2 .accent {
   font-variation-settings: "slnt" -10;
 }
 
@@ -77,6 +93,10 @@ body {
   gap: 8px;
 }
 
+.hero {
+  margin-bottom: 100px;
+}
+
 .hero__wrapper {
   padding: 100px;
   background-image: url("../assets/images/hero_background.jpg");
@@ -96,15 +116,86 @@ body {
   color: var(--text-light);
 }
 
-.hero__title span {
+.hero__title .accent {
   color: var(--text-accent);
 }
 
 .hero__menu-btn {
   width: 200px;
   height: 64px;
-  background: var(--background-body);
+  background-color: var(--background-body);
   outline: none;
   border: none;
   border-radius: 100px;
+}
+
+.slider {
+  margin-bottom: 100px;
+}
+
+.slider__title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.slider__title .accent {
+  color: var(--text-accent);
+}
+
+.slider__wrapper {
+  display: grid;
+  grid-template-columns: 60px 1fr 60px;
+  grid-template-rows: auto auto;
+  align-items: center;
+  gap: 40px 0;
+}
+
+.slider__row {
+  display: flex;
+  justify-content: center;
+}
+
+.slide {
+  display: flex;
+  max-width: 480px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.slide__img {
+  width: 100%;
+}
+
+.slide__text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.slider__left-btn,
+.slider__right-btn {
+  outline: none;
+  border: none;
+  background: none;
+}
+
+.slider__pagination {
+  display: flex;
+  grid-column: span 3;
+  justify-self: center;
+  gap: 12px;
+  list-style: none;
+}
+
+.slider__pagination-bullet {
+  width: 40px;
+  height: 4px;
+  background-color: var(--border-light);
+  border-radius: 100px;
+}
+
+.slider__pagination-bullet.active {
+  background-color: var(--border-dark);
 }
