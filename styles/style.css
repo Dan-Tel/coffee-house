@@ -101,6 +101,7 @@ body {
   padding: 100px;
   background-image: url("../assets/images/hero-background.jpg");
   background-size: cover;
+  background-position: center;
   border-radius: 40px;
 }
 
@@ -234,4 +235,57 @@ body {
 .about__images-column:nth-child(1) .about__image:nth-child(2),
 .about__images-column:nth-child(2) .about__image:nth-child(1) {
   height: 430px;
+}
+
+.mobile-app {
+  margin-bottom: 100px;
+}
+
+.mobile-app__container {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.mobile-app__offer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mobile-app__title .accent {
+  color: var(--text-accent);
+}
+
+.mobile-app__btns {
+  display: flex;
+  gap: 20px;
+}
+
+.mobile-app__app-store-btn,
+.mobile-app__google-play-btn {
+  display: flex;
+  width: 200px;
+  height: 64px;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: start;
+  gap: 8px;
+  outline: none;
+  background: none;
+  border: 1px solid var(--border-dark);
+  border-radius: 100px;
+}
+
+.app-store-btn__text,
+.google-play-btn__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+}
+
+.mobile-app__offer,
+.mobile-app__img {
+  width: calc((100% - 100px) / 2);
 }
