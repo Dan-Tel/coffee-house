@@ -177,6 +177,8 @@ body {
 
 .slider__left-btn,
 .slider__right-btn {
+  width: 60px;
+  height: 60px;
   outline: none;
   border: none;
   background: none;
@@ -288,4 +290,63 @@ body {
 .mobile-app__offer,
 .mobile-app__img {
   width: calc((100% - 100px) / 2);
+}
+
+.footer {
+  margin-bottom: 40px;
+  color: var(--text-light);
+}
+
+.footer__wrapper {
+  display: flex;
+  padding: 100px;
+  align-items: center;
+  gap: 100px;
+  background-color: var(--background-container);
+  border-radius: 40px;
+}
+
+.footer__offer {
+  display: flex;
+  flex-direction: column;
+  width: calc((100% - 100px) / 2);
+  gap: 40px;
+}
+
+.footer__title .accent {
+  color: var(--text-accent);
+}
+
+.footer__socials {
+  display: flex;
+  gap: 12px;
+}
+
+.footer__social-btn {
+  width: 60px;
+  height: 60px;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+.footer__contacts-info {
+  display: flex;
+  width: calc((100% - 100px) / 2);
+  flex-direction: column;
+  gap: 40px;
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+}
+
+.footer__contacts li {
+  display: flex;
+  padding-bottom: 4px;
+  align-items: center;
+  gap: 8px;
 }
