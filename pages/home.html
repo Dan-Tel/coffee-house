@@ -9,24 +9,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/style.css">
   <title>Home</title>
+  <link rel="icon" type="image/x-icon" href="../assets/icons/header-logo.svg">
 </head>
 
 <body>
   <header class="header">
     <div class="header__container container">
-      <img class="header__logo" width="100px" height="60px" alt="Coffee House" src="../assets/icons/header-logo.svg">
+      <a href="#">
+        <img class="header__logo" width="100px" height="60px" alt="Coffee House" src="../assets/icons/header-logo.svg">
+      </a>
 
-      <ul class="header__nav">
-        <li class="nav-item fs-link-btn">Favorite coffee</li>
-        <li class="nav-item fs-link-btn">About</li>
-        <li class="nav-item fs-link-btn">Mobile app</li>
-        <li class="nav-item fs-link-btn">Contact us</li>
-      </ul>
+      <nav class="header__nav">
+        <a class="nav-item fs-link-btn" href="#favorite-coffee">Favorite coffee</a>
+        <a class="nav-item fs-link-btn" href="#about">About</a>
+        <a class="nav-item fs-link-btn" href="#mobile-app">Mobile app</a>
+        <a class="nav-item fs-link-btn" href="#contact-us">Contact us</a>
+        </ul>
+      </nav>
 
-      <div class="header__menu-btn fs-link-btn">
+      <a class="header__menu-btn fs-link-btn" href="./menu.html">
         Menu
         <img src="../assets/icons/menu-cup-icon.svg" alt="Cup">
-      </div>
+      </a>
     </div>
   </header>
 
@@ -44,13 +48,16 @@
             seeking a warm and inviting space to enjoy their favorite beverage.
           </p>
 
-          <button class="hero__menu-btn fs-link-btn">Menu</button>
+          <a class="hero__menu-btn fs-link-btn" href="./menu.html">
+            Menu
+            <img src="../assets/icons/menu-cup-icon.svg" alt="Cup">
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="slider">
+  <section class="slider" id="favorite-coffee">
     <div class="slider__container container">
       <h2 class="slider__title fs-heading-2">
         Choose your <span class="accent">favorite</span> coffee
@@ -58,10 +65,8 @@
 
       <div class="slider__wrapper">
         <button class="slider__left-btn">
-          <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="#665f55" />
-            <path d="M36.5 30H24M24 30L30 24M24 30L30 36" stroke="#403f3d" stroke-linecap="round"
-              stroke-linejoin="round" />
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.5 7H1M1 7L7 1M1 7L7 13" stroke="#403f3d" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </button>
 
@@ -80,9 +85,8 @@
         </div>
 
         <button class="slider__right-btn">
-          <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="#665f55" />
-            <path d="M24 30H36.5M36.5 30L30.5 24M36.5 30L30.5 36" stroke="#403f3d" stroke-linecap="round"
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 7H13.5M13.5 7L7.5 1M13.5 7L7.5 13" stroke="#403f3d" stroke-linecap="round"
               stroke-linejoin="round" />
           </svg>
         </button>
@@ -96,7 +100,7 @@
     </div>
   </section>
 
-  <section class="about">
+  <section class="about" id="about">
     <div class="about__container container">
       <h2 class="about__title fs-heading-2">
         Resource is <span class="accent">the perfect and cozy place</span> where
@@ -106,18 +110,26 @@
 
       <div class="about__images-container">
         <div class="about__images-column">
-          <img class="about__image" alt="Girl with a coffee" src="../assets/images/about-1.jpg">
-          <img class="about__image small" alt="Coffee" src="../assets/images/about-2.jpg">
+          <div class="about__image-wrapper">
+            <img class="about__image" alt="Girl with a coffee" src="../assets/images/about-1.jpg">
+          </div>
+          <div class="about__image-wrapper small">
+            <img class="about__image" alt="Coffee" src="../assets/images/about-2.jpg">
+          </div>
         </div>
         <div class="about__images-column">
-          <img class="about__image small" alt="Man with a coffee" src="../assets/images/about-3.jpg">
-          <img class="about__image" alt="Pair with coffee" src="../assets/images/about-4.jpg">
+          <div class="about__image-wrapper small">
+            <img class="about__image" alt="Man with a coffee" src="../assets/images/about-3.jpg">
+          </div>
+          <div class="about__image-wrapper">
+            <img class="about__image" alt="Pair with coffee" src="../assets/images/about-4.jpg">
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="mobile-app">
+  <section class="mobile-app" id="mobile-app">
     <div class="mobile-app__container container">
       <div class="mobile-app__offer">
         <h2 class="mobile-app__title fs-heading-2">
@@ -177,7 +189,7 @@
     </div>
   </section>
 
-  <footer class="footer">
+  <footer class="footer" id="contact-us">
     <div class="footer__container container">
       <div class="footer__wrapper">
         <div class="footer__offer">
@@ -188,30 +200,27 @@
 
           <div class="footer__socials">
             <button class="footer__social-btn">
-              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="#C1B6AD" />
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
-                  d="M41 21.0101C41 21.0101 38.9821 22.2022 37.86 22.5401C37.2577 21.8476 36.4573 21.3567 35.567 21.134C34.6767 20.9112 33.7395 20.9673 32.8821 21.2945C32.0247 21.6218 31.2884 22.2045 30.773 22.9638C30.2575 23.7231 29.9877 24.6224 30 25.5401V26.5401C28.2426 26.5856 26.5013 26.1959 24.931 25.4055C23.3607 24.6151 22.0103 23.4487 21 22.0101C21 22.0101 17 31.0101 26 35.0101C23.9405 36.408 21.4872 37.109 19 37.0101C28 42.0101 39 37.0101 39 25.5101C38.9991 25.2315 38.9723 24.9537 38.92 24.6801C39.9406 23.6735 41 21.0101 41 21.0101Z"
+                  d="M23 3.01006C23 3.01006 20.9821 4.20217 19.86 4.54006C19.2577 3.84757 18.4573 3.35675 17.567 3.13398C16.6767 2.91122 15.7395 2.96725 14.8821 3.29451C14.0247 3.62177 13.2884 4.20446 12.773 4.96377C12.2575 5.72309 11.9877 6.62239 12 7.54006V8.54006C10.2426 8.58562 8.50127 8.19587 6.93101 7.4055C5.36074 6.61513 4.01032 5.44869 3 4.01006C3 4.01006 -1 13.0101 8 17.0101C5.94053 18.408 3.48716 19.109 1 19.0101C10 24.0101 21 19.0101 21 7.51006C20.9991 7.23151 20.9723 6.95365 20.92 6.68006C21.9406 5.67355 23 3.01006 23 3.01006Z"
                   stroke="#e1d4c9" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </button>
             <button class="footer__social-btn">
-              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="#c1b6ad" />
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
-                  d="M30 34C32.2091 34 34 32.2091 34 30C34 27.7909 32.2091 26 30 26C27.7909 26 26 27.7909 26 30C26 32.2091 27.7909 34 30 34Z"
+                  d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
                   stroke="#e1d4c9" stroke-linecap="round" stroke-linejoin="round" />
                 <path
-                  d="M21 34V26C21 23.2386 23.2386 21 26 21H34C36.7614 21 39 23.2386 39 26V34C39 36.7614 36.7614 39 34 39H26C23.2386 39 21 36.7614 21 34Z"
+                  d="M3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16Z"
                   stroke="#e1d4c9" />
-                <path d="M35.5 24.51L35.51 24.4989" stroke="#e1d4c9" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M17.5 6.51L17.51 6.49889" stroke="#e1d4c9" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </button>
             <button class="footer__social-btn">
-              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="#c1b6ad" />
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
-                  d="M35 20H32C30.6739 20 29.4021 20.5268 28.4645 21.4645C27.5268 22.4021 27 23.6739 27 25V28H24V32H27V40H31V32H34L35 28H31V25C31 24.7348 31.1054 24.4804 31.2929 24.2929C31.4804 24.1054 31.7348 24 32 24H35V20Z"
+                  d="M17 2H14C12.6739 2 11.4021 2.52678 10.4645 3.46447C9.52678 4.40215 9 5.67392 9 7V10H6V14H9V22H13V14H16L17 10H13V7C13 6.73478 13.1054 6.48043 13.2929 6.29289C13.4804 6.10536 13.7348 6 14 6H17V2Z"
                   stroke="#e1d4c9" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </button>
@@ -221,15 +230,19 @@
         <div class="footer__contacts-info">
           <h3 class="fs-heading-3">Contact us</h3>
           <ul class="footer__contacts">
-            <li class="fs-link-btn">
-              <img class="contact-icon" alt="Location" src="../assets/icons/location-icon.svg">
-              8558 Green Rd., LA
-            </li>
+            <a href="#">
+              <li class="fs-link-btn">
+                <img class="contact-icon" alt="Location" src="../assets/icons/location-icon.svg">
+                8558 Green Rd., LA
+              </li>
+            </a>
 
-            <li class="fs-link-btn">
-              <img class="contact-icon" alt="Phone" src="../assets/icons/phone-icon.svg">
-              +1 (603) 555-0123
-            </li>
+            <a href="#">
+              <li class="fs-link-btn">
+                <img class="contact-icon" alt="Phone" src="../assets/icons/phone-icon.svg">
+                +1 (603) 555-0123
+              </li>
+            </a>
 
             <li class="fs-link-btn">
               <img class="contact-icon" alt="Clock" src="../assets/icons/clock-icon.svg">

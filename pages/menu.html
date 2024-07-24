@@ -8,25 +8,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/style.css">
-  <title>Home</title>
+  <title>Menu</title>
+  <link rel="icon" type="image/x-icon" href="../assets/icons/header-logo.svg">
 </head>
 
 <body>
   <header class="header">
     <div class="header__container container">
-      <img class="header__logo" width="100px" height="60px" alt="Coffee House" src="../assets/icons/header-logo.svg">
+      <a href="./home.html">
+        <img class="header__logo" width="100px" height="60px" alt="Coffee House" src="../assets/icons/header-logo.svg">
+      </a>
 
-      <ul class="header__nav">
-        <li class="nav-item fs-link-btn">Favorite coffee</li>
-        <li class="nav-item fs-link-btn">About</li>
-        <li class="nav-item fs-link-btn">Mobile app</li>
-        <li class="nav-item fs-link-btn">Contact us</li>
-      </ul>
+      <nav class="header__nav">
+        <a class="nav-item fs-link-btn" href="./home.html#favorite-coffee">Favorite coffee</a>
+        <a class="nav-item fs-link-btn" href="./home.html#about">About</a>
+        <a class="nav-item fs-link-btn" href="./home.html#mobile-app">Mobile app</a>
+        <a class="nav-item fs-link-btn" href="#contact-us">Contact us</a>
+        </ul>
+      </nav>
 
-      <div class="header__menu-btn fs-link-btn">
+      <a class="header__menu-btn active fs-link-btn" href="#">
         Menu
         <img src="../assets/icons/menu-cup-icon.svg" alt="Cup">
-      </div>
+      </a>
     </div>
   </header>
 
@@ -56,7 +60,9 @@
 
       <div class="menu__list">
         <div class="menu__item">
-          <img class="item-menu__img" alt="Irish coffee" src="../assets/images/coffee-1.jpg">
+          <div class="item-menu__img-wrapper">
+            <img class="item-menu__img" alt="Irish coffee" src="../assets/images/coffee-1.jpg">
+          </div>
           <div class="item-menu__text">
             <h3 class="fs-heading-3">Irish coffee</h3>
             <p class="fs-medium">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
@@ -65,7 +71,9 @@
         </div>
 
         <div class="menu__item">
-          <img class="item-menu__img" alt="Kahlua coffee" src="../assets/images/coffee-2.jpg">
+          <div class="item-menu__img-wrapper">
+            <img class="item-menu__img" alt="Kahlua coffee" src="../assets/images/coffee-2.jpg">
+          </div>
           <div class="item-menu__text">
             <h3 class="fs-heading-3">Kahlua coffee</h3>
             <p class="fs-medium">Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
@@ -74,7 +82,9 @@
         </div>
 
         <div class="menu__item">
-          <img class="item-menu__img" alt="Honey raf" src="../assets/images/coffee-3.jpg">
+          <div class="item-menu__img-wrapper">
+            <img class="item-menu__img" alt="Honey raf" src="../assets/images/coffee-3.jpg">
+          </div>
           <div class="item-menu__text">
             <h3 class="fs-heading-3">Honey raf</h3>
             <p class="fs-medium">Espresso with frothed milk, cream and aromatic honey</p>
@@ -83,7 +93,9 @@
         </div>
 
         <div class="menu__item">
-          <img class="item-menu__img" alt="Ice cappuccino" src="../assets/images/coffee-4.jpg">
+          <div class="item-menu__img-wrapper">
+            <img class="item-menu__img" alt="Ice cappuccino" src="../assets/images/coffee-4.jpg">
+          </div>
           <div class="item-menu__text">
             <h3 class="fs-heading-3">Ice cappuccino</h3>
             <p class="fs-medium">Cappuccino with soft thick foam in summer version with ice</p>
@@ -92,7 +104,9 @@
         </div>
 
         <div class="menu__item">
-          <img class="item-menu__img" alt="Espresso" src="../assets/images/coffee-5.jpg">
+          <div class="item-menu__img-wrapper">
+            <img class="item-menu__img" alt="Espresso" src="../assets/images/coffee-5.jpg">
+          </div>
           <div class="item-menu__text">
             <h3 class="fs-heading-3">Espresso</h3>
             <p class="fs-medium">Classic black coffee</p>
@@ -101,7 +115,9 @@
         </div>
 
         <div class="menu__item">
-          <img class="item-menu__img" alt="Latte" src="../assets/images/coffee-6.jpg">
+          <div class="item-menu__img-wrapper">
+            <img class="item-menu__img" alt="Latte" src="../assets/images/coffee-6.jpg">
+          </div>
           <div class="item-menu__text">
             <h3 class="fs-heading-3">Latte</h3>
             <p class="fs-medium">Espresso coffee with the addition of steamed milk and dense milk foam</p>
@@ -110,7 +126,9 @@
         </div>
 
         <div class="menu__item">
-          <img class="item-menu__img" alt="Latte macchiato" src="../assets/images/coffee-7.jpg">
+          <div class="item-menu__img-wrapper">
+            <img class="item-menu__img" alt="Latte macchiato" src="../assets/images/coffee-7.jpg">
+          </div>
           <div class="item-menu__text">
             <h3 class="fs-heading-3">Latte macchiato</h3>
             <p class="fs-medium">Espresso with frothed milk and chocolate</p>
@@ -119,7 +137,9 @@
         </div>
 
         <div class="menu__item">
-          <img class="item-menu__img" alt="Coffee with cognac" src="../assets/images/coffee-8.jpg">
+          <div class="item-menu__img-wrapper">
+            <img class="item-menu__img" alt="Coffee with cognac" src="../assets/images/coffee-8.jpg">
+          </div>
           <div class="item-menu__text">
             <h3 class="fs-heading-3">Coffee with cognac</h3>
             <p class="fs-medium">Fragrant black coffee with cognac and whipped cream</p>
@@ -130,7 +150,7 @@
     </div>
   </section>
 
-  <footer class="footer">
+  <footer class="footer" id="contact-us">
     <div class="footer__container container">
       <div class="footer__wrapper">
         <div class="footer__offer">
@@ -174,15 +194,19 @@
         <div class="footer__contacts-info">
           <h3 class="fs-heading-3">Contact us</h3>
           <ul class="footer__contacts">
-            <li class="fs-link-btn">
-              <img class="contact-icon" alt="Location" src="../assets/icons/location-icon.svg">
-              8558 Green Rd., LA
-            </li>
+            <a href="#">
+              <li class="fs-link-btn">
+                <img class="contact-icon" alt="Location" src="../assets/icons/location-icon.svg">
+                8558 Green Rd., LA
+              </li>
+            </a>
 
-            <li class="fs-link-btn">
-              <img class="contact-icon" alt="Phone" src="../assets/icons/phone-icon.svg">
-              +1 (603) 555-0123
-            </li>
+            <a href="#">
+              <li class="fs-link-btn">
+                <img class="contact-icon" alt="Phone" src="../assets/icons/phone-icon.svg">
+                +1 (603) 555-0123
+              </li>
+            </a>
 
             <li class="fs-link-btn">
               <img class="contact-icon" alt="Clock" src="../assets/icons/clock-icon.svg">
