@@ -159,11 +159,23 @@ body {
 }
 
 .hero__wrapper {
+  position: relative;
   padding: 100px;
-  background-image: url("../assets/images/hero-background.jpg");
-  background-size: cover;
-  background-position: center;
   border-radius: 40px;
+  overflow: hidden;
+}
+
+.hero__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
 }
 
 .hero__body {
