@@ -769,10 +769,6 @@ body {
     opacity: 0;
   }
 
-  .menu__item:nth-child(n + 5) {
-    display: none;
-  }
-
   .menu__load-btn {
     display: flex;
   }
