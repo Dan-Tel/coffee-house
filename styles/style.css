@@ -1,7 +1,7 @@
 :root {
   --background-body: #e1d4c9;
   --background-container: #665f55;
-  --background-backdrop: #403f3d;
+  --background-backdrop: rgba(64, 63, 61, 0.8);
 
   --text-dark: #403f3d;
   --text-light: #e1d4c9;
@@ -25,7 +25,6 @@ body {
   font-family: "Inter", sans-serif;
   background-color: var(--background-body);
   color: var(--text-dark);
-  font-variation-settings: "slnt" 0;
 }
 
 .fs-heading-1 {
@@ -48,7 +47,7 @@ body {
 
 .fs-heading-1 .accent,
 .fs-heading-2 .accent {
-  font-variation-settings: "slnt" -10;
+  font-style: italic;
 }
 
 .fs-medium {
@@ -112,7 +111,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 100px;
-  background: var(--background-body);
+  background-color: var(--background-body);
   z-index: 2;
   transform: translateX(100%);
   transition: ease-in-out 0.15s;
@@ -633,7 +632,7 @@ body:has(.header__burger-menu.active) {
   gap: 16px;
 }
 
-.menu__filter-btn {
+.menu__btn {
   display: flex;
   padding: 8px 16px 8px 8px;
   gap: 8px;
@@ -646,26 +645,27 @@ body:has(.header__burger-menu.active) {
   cursor: pointer;
 }
 
-.menu__filter-icon {
+.menu__btn-icon {
   display: flex;
   width: 30px;
   height: 30px;
   align-items: center;
   justify-content: center;
   border-radius: 100px;
+  color: var(--text-dark);
   background-color: var(--border-light);
   transition: ease-in-out 0.15s;
 }
 
-.menu__filter-btn:hover,
-.menu__filter-btn.active {
+.menu__btn:hover,
+.menu__btn.active {
   color: var(--text-light);
   background-color: var(--background-container);
   border: 1px var(--border-dark) solid;
 }
 
-.menu__filter-btn:hover .menu__filter-icon,
-.menu__filter-btn.active .menu__filter-icon {
+.menu__btn:hover .menu__btn-icon,
+.menu__btn.active .menu__btn-icon {
   background-color: var(--background-body);
 }
 
@@ -716,6 +716,112 @@ body:has(.header__burger-menu.active) {
 
 .item-menu__price {
   align-self: end;
+}
+
+.menu__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 0 40px;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  z-index: -1;
+  transition: ease-in-out 0.15s;
+}
+
+.modal__background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-backdrop);
+  z-index: 2;
+}
+
+.modal__wrapper {
+  display: flex;
+  max-width: 800px;
+  padding: 16px;
+  align-items: flex-start;
+  gap: 20px;
+  background-color: var(--background-body);
+  border-radius: 40px;
+  transform: translateY(50%);
+  z-index: 3;
+  transition: ease-in-out 0.15s;
+}
+
+.menu__modal.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.menu__modal.active .modal__wrapper {
+  transform: translateY(0);
+}
+
+body:has(.menu__modal.active) {
+  overflow-y: hidden;
+}
+
+.modal__img {
+  width: min(310px, 50%);
+  object-fit: none;
+  border-radius: 40px;
+}
+
+.modal__body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal__offer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal__inputs-wrapper,
+.modal__inputs {
+  display: flex;
+  gap: 8px;
+}
+
+.modal__inputs {
+  flex-wrap: wrap;
+}
+
+.modal__inputs-wrapper {
+  flex-direction: column;
+}
+
+.modal__size-btn .menu__btn-icon {
+  text-transform: capitalize;
+}
+
+.modal__price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal__alert {
+  display: flex;
+  padding: 12px 0;
+  align-items: start;
+  gap: 8px;
+  border-top: 1px solid var(--border-light);
+}
+
+.modal__close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu__load-btn {
@@ -848,13 +954,13 @@ body:has(.header__burger-menu.active) {
     transform: scale(1.1);
   }
 
-  .menu__filter-btn:not(.active):hover {
+  .menu__btn:not(.active):hover {
     color: var(--text-dark);
     background-color: unset;
     border: 1px var(--border-light) solid;
   }
 
-  .menu__filter-btn:not(.active):hover .menu__filter-icon {
+  .menu__btn:not(.active):hover .menu__btn-icon {
     background-color: var(--border-light);
   }
 }
@@ -904,5 +1010,13 @@ body:has(.header__burger-menu.active) {
 
   .menu__filter {
     gap: 8px;
+  }
+
+  .menu__modal {
+    padding: 0 16px;
+  }
+
+  .modal__img {
+    display: none;
   }
 }

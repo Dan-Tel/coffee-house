@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header fs-medium">
     <div class="header__container container">
       <a class="header__logo" href="./home.html">
         <img width="100px" height="60px" alt="Coffee House" src="../assets/icons/header-logo.svg">
@@ -49,7 +49,7 @@
     </div>
   </header>
 
-  <section class="menu">
+  <section class="menu fs-medium">
     <div class="menu__container container">
       <h2 class="menu__title fs-heading-2">
         Behind each of our cups
@@ -57,31 +57,102 @@
       </h2>
 
       <div class="menu__filter">
-        <button class="menu__filter-btn fs-link-btn active">
-          <div class="menu__filter-icon">☕</div>
+        <button class="menu__filter-btn menu__btn fs-link-btn active">
+          <div class="menu__btn-icon">☕</div>
           Coffee
         </button>
 
-        <button class="menu__filter-btn fs-link-btn">
-          <div class="menu__filter-icon">🫖</div>
+        <button class="menu__filter-btn menu__btn fs-link-btn">
+          <div class="menu__btn-icon">🫖</div>
           Tea
         </button>
 
-        <button class="menu__filter-btn fs-link-btn">
-          <div class="menu__filter-icon">🍰</div>
+        <button class="menu__filter-btn menu__btn fs-link-btn">
+          <div class="menu__btn-icon">🍰</div>
           Dessert
         </button>
       </div>
 
-      <div class="menu__list"></div>
+      <div class="menu__list">
+
+      </div>
+
+      <div class="menu__modal">
+        <div class="modal__background"></div>
+        <div class="modal__wrapper">
+          <img class="modal__img" src="../assets/images/coffee-1.jpg" alt="X">
+          <div class="modal__body">
+            <div class="modal__offer">
+              <h3 class="modal__title fs-heading-3">Irish Coffee</h3>
+              <p class="modal__description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+            </div>
+
+            <div class="modal__inputs-wrapper">
+              <p>Size</p>
+              <div class="modal__sizes-inputs modal__inputs">
+                <button class="modal__size-btn menu__btn active fs-link-btn">
+                  <div class="menu__btn-icon">S</div>
+                  200 ml
+                </button>
+
+                <button class="modal__size-btn menu__btn fs-link-btn">
+                  <div class="menu__btn-icon">M</div>
+                  300 ml
+                </button>
+
+                <button class="modal__size-btn menu__btn fs-link-btn">
+                  <div class="menu__btn-icon">L</div>
+                  400 ml
+                </button>
+              </div>
+            </div>
+
+            <div class="modal__inputs-wrapper">
+              <p>Additives</p>
+              <div class="modal__additives-inputs modal__inputs">
+                <button class="modal__additives-btn menu__btn fs-link-btn">
+                  <div class="menu__btn-icon">1</div>
+                  Sugar
+                </button>
+
+                <button class="modal__additives-btn menu__btn fs-link-btn">
+                  <div class="menu__btn-icon">2</div>
+                  Cinnamon
+                </button>
+
+                <button class="modal__additives-btn menu__btn fs-link-btn">
+                  <div class="menu__btn-icon">3</div>
+                  Syrup
+                </button>
+              </div>
+            </div>
+
+            <div class="modal__price">
+              <h3 class="fs-heading-3">Total:</h3>
+              <h3 class="fs-heading-3">$7.00</h3>
+            </div>
+
+            <div class="modal__alert">
+              <img class="modal__alert-icon" src="../assets/icons/alert-icon.svg" alt="Alert icon">
+              <p class="fs-caption">
+                The cost is not final. Download our mobile app to see the final price and place your
+                order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.
+              </p>
+            </div>
+
+            <button class="modal__close-btn menu__btn fs-link-btn">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
 
       <button class="menu__load-btn">
         <img src="../assets/icons/load-icon.svg" alt="Load more">
       </button>
-    </div>
   </section>
 
-  <footer class="footer" id="contact-us">
+  <footer class="footer fs-medium" id="contact-us">
     <div class="footer__container container">
       <div class="footer__wrapper">
         <div class="footer__offer">
